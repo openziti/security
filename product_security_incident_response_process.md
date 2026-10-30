@@ -4,19 +4,21 @@ Various inputs will enter items for consideration into this process.  These will
 
 **Scope:**  This process will manage the product security of the OpenZiti organization and NetFoundry software.  OpenZiti includes the core components and derivative products, such as zrok and browZer which are also developed within the organization, as well as third party vulnerabilities discovered in dependencies not in the scope of other CVE Numbering Authorities.  This scope will not extend to end of life or end of support products.
 
+Researchers and users finding security vulnerabilities should report them via security@openziti.io or security@netfoundry.io. Please include as much information as possible, and GitHub handles, email, name, or other identification you would like to be used for attribution of the discovery of the issue.
+
 Upon receiving the potential vulnerability information, the first step is to assess the severity and potential impact of any exploitation of the vulnerability.   In assessing the potential impact, we must determine if there is any impact.  To designate a reported vulnerability as no impact and therefore not applicable, clear reasoning must be applied that proves to a reasonable and competent person that there is no path of exploitation of the vulnerability in the software as released.  For example, the OpenZiti repository v1.1.15 contains a dependency for disintegration/imaging v1.6.2 (indirectly).  Github's Dependabot process has reported a vulnerability in this package indicating a possible panic due to a crafted TIFF file being processed.  There is no interface in the software to initiate the processing of an image file, therefore there is no way in which this vulnerability could be exploited once the software is deployed.   
 
 Once any impact is suspected, the vulnerability will be discussed with  the relevant development team as well as Security to determine possible exploitation paths and the values of the CVSS entries to determine a score.  This discussion may lead to a conclusion that the vulnerability is not exploitable, or develop a set of required mitigation actions.  
+
+Regardless of the findings, a reply shall be sent to the reporter within 14 days, apprising them of the status of the report.  Once the mitigation is available, the reporter will also receive the potential fix information for verification and concurrence that the mitigation is appropriate to the issue they reported. 
 
 If the vulnerability is in a dynamically linked dependency, which can be updated by the customer independently, no CVE will be issued, but rather a security advisory.  This advisory will indicate to the customer the potential impact, the required dependency update, and the tested versions of the software with that dependency updated.  The security advisory will be distributed via the open source communities' best current methods, as well as by email or other appropriate channels to all current NetFoundry customers.  See Appendix A for an example Security Advisory
 
 If a vulnerability is exploitable and cannot be mitigated by other methods than an update of NetFoundry or OpenZiti software, a CVE release is required.  CVEs should not be released until the software including the proper mitigations is available.  This may require a slight release delay and coordination between the NetFoundry and OpenZiti software release processes.  The elapsed time between the release of the updated OpenZiti software and CVE and the availability of the version within the NetFoundry systems should be kept to an absolute minimum.
 
-Reference the current MITRE template for CVE reporting to the appropriate CVE Numbering Authority level.
+NetFoundry is the CVE Numbering Authority (CNA) for the OpenZiti project and NetFoundry namespaces. NetFoundry's security team will manage the creation and releae of the CVE, when a CVE assignment is appropriate.  Reporters may contact the NetFoundry security team for any updates during the process.
 
-https://cve.mitre.org/cve/list_rules_and_guidance/cve_assignment_information_format.html
-
-Security advisories and CVE's will be distributed in multiple channels. Security advisories and CVE notifications will be posted in the current community forums, for example Discourse, placed in the release notes, and if the vulnerability addressed is a critical or high level, a notice should be placed on the main GitHub page of the OpenZiti project for no less than 30 days.
+Security advisories and CVE's will be distributed in multiple channels. Security advisories and CVE notifications will be posted in the current community forums, for example Discourse, placed in the release notes, and if the vulnerability addressed is rated critical, a notice should be placed on the main GitHub page of the OpenZiti project for no less than 30 days.
 
 
 Process Flowchart
