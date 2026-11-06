@@ -1,3 +1,3 @@
 # Security Policy
 
-Please refer to the [openziti-security repository](https://github.com/openziti/openziti-security) for details of the security policies and processes for this repository.
+Please refer to the PSIRT and vulnerability disclosure documents in this repository for the processes and procedures for the OpenZiti security processes.
